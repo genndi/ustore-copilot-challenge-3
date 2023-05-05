@@ -6,7 +6,7 @@ ustore-copilot-challenge-3
 # ustore-copilot-challenge-4
 
 ### BUILD CONTAINER - root dir
-docker build -t ustorecopilotchallenge3:latest .
+docker build -t ustorecopilotchallenge4:latest .
 
 ### RUN container
-docker run -p8080:8080 -e "DB_URL=jdbc:mariadb://127.0.0.1:3306/employee_challenge" -e "DB_PASS=root" -e "DB_PASS=root" ustorecopilotchallenge3:latest
+docker run -p8080:8080 -e "DB_URL=jdbc:mariadb://127.0.0.1:3306/employee_challenge" -e "DB_PASS=root" -e "DB_PASS=root" ustorecopilotchallenge4:latest
