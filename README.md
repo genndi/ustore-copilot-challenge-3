@@ -10,3 +10,7 @@ docker build -t ustorecopilotchallenge4:latest .
 
 ### RUN container
 docker run -p8080:8080 -e "DB_URL=jdbc:mariadb://127.0.0.1:3306/employee_challenge" -e "DB_PASS=root" -e "DB_PASS=root" ustorecopilotchallenge4:latest
+
+# ustore-copilot-challenge-5
+
+[Deployment File](https://github.com/genndi/ustore-copilot-challenge-3/blob/main/deployment.yaml)
