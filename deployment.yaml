@@ -1,0 +1,27 @@
+# criar arquivo de deployment kubernetes com 2 replicas maximas utilizando a imagem criada no passo anterior e expor a porta 8080 do container com variavel de ambiente PORT=8080
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: challenge4
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: challenge4
+  template:
+    metadata:
+      labels:
+        app: challenge4
+    spec:
+      containers:
+      - name: challenge4
+        image: ustorecopilotchallenge4:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: DB_URL
+          value: "jdbc:mariadb://127.0.0.1:3306/employee_challenge"
+        - name: DB_USER
+          value: "root"
+        - name: DB_PASSWORD
+          value: "root"
